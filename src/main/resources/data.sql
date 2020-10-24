@@ -1,6 +1,6 @@
 INSERT INTO USERS (user_id, username, surname, password, dni, email) VALUES
-  (999, 'John', 'Doe', '$2a$10$I9Xlsj8CUS9v6cZ2e9FkO.jkyK.wqHhdy3z6dBR9JY2QOjd5Xrn/K', '522487967R', 'johndoe@gmail.com'),
-  (998, 'Richard', 'Hernandez', '$2a$10$I9Xlsj8CUS9v6cZ2e9FkO.jkyK.wqHhdy3z6dBR9JY2QOjd5Xrn/K', '1234356D', 'rhernandez@gmail.com');
+  (999, 'john', 'Doe', '$2a$10$I9Xlsj8CUS9v6cZ2e9FkO.jkyK.wqHhdy3z6dBR9JY2QOjd5Xrn/K', '522487967R', 'johndoe@gmail.com'),
+  (998, 'admin', 'Hernandez', '$2a$10$I9Xlsj8CUS9v6cZ2e9FkO.jkyK.wqHhdy3z6dBR9JY2QOjd5Xrn/K', '1234356D', 'rhernandez@gmail.com');
 
 INSERT INTO ROLES (role_id, name) VALUES
   (999, 'ROLE_USER'),
