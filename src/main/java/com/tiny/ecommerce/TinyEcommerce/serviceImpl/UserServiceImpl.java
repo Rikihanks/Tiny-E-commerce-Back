@@ -41,9 +41,16 @@ public class UserServiceImpl implements IUserService, UserDetailsService{
 
 	@Override
 	public UserDetails loadUserByUsername(String username) throws UsernameNotFoundException {
-		UserEntity user = repository.findByUsername(username);
-		List<GrantedAuthority> authorities = buildAuthorities(user.getRoles());
-		return buildUser(user, authorities);
+		UserEntity user = null;
+		List<GrantedAuthority> authorities = null;
+		try {
+			 user = repository.findByUsername(username);
+			 authorities = buildAuthorities(user.getRoles());
+			return buildUser(user, authorities);
+		}catch (Exception e) {
+			System.out.println("unable to find user");
+			return null;
+		}
 	}
 
 	@Override
